@@ -1,0 +1,20 @@
+// let word = ['а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'ы', 'ь', 'э', 'ю','я'];
+// let num = [12, 3, 65, 7, 1, 0, 13, 44, 4, 6, 80, 21, 22, 23, 61, 89, 98, 198, 101, 51, 32, 52, 76, 66, 55, 50, 9, 27, 28, 158, 161, 133, 206];
+let text = ("ввод")
+let cod;
+let result = ""
+
+
+cod = text.split("")
+for (let i = 0; i < cod.length; i++){
+    for (let j = 0; j < word.length; j++){
+        if (cod[i] == word[j] ){
+            result += num[j] + " ";
+        }
+    }
+}
+console.log(result)
+
+let aa = document.querySelector("#t")
+
+console.log(aa)
