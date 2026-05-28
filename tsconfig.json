@@ -1,17 +1,33 @@
 {
   "compilerOptions": {
-    "target": "es2016",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "jsx": "react-jsx",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "strict": true,
-    "esModuleInterop": true,
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": false,
-    "outDir": "./dist"
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "@/*": ["./src/*"],
+      "@components/*": ["./src/components/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@layouts/*": ["./src/layouts/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@services/*": ["./src/services/*"],
+      "@types/*": ["./src/types/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@store/*": ["./src/store/*"]
+    }
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules"]
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
